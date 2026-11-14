@@ -1,0 +1,237 @@
+<title>سبک‌های باغ ما</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;800&family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one long column; each style is a labelled "board" holding two mock screens (today + journal page) with identical content, so only the style differs. */
+:root{--bg:#F3F5F2;--ink:#16201B;--muted:#66736C;--line:#D9DFDA;--accent:#1F6F4A;--thread:#C93C5E;--font:'Vazirmatn',Tahoma,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101512;--ink:#E7EDE9;--muted:#8C9A92;--line:#25302A;--accent:#5CC48C;--thread:#F0728F;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101512;--ink:#E7EDE9;--muted:#8C9A92;--line:#25302A;--accent:#5CC48C;--thread:#F0728F;color-scheme:dark}
+*{box-sizing:border-box}
+body{direction:rtl;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.8;padding-block:24px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+h1,h2,h3,p{margin:0}
+h1{font-size:28px;font-weight:800;line-height:1.4;text-wrap:balance}
+.lead{color:var(--muted);max-width:60ch}
+.head{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.head .tag{font-size:12px;color:var(--muted)}
+.head h2{font-size:22px;font-weight:800}
+.meta{display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:12px;color:var(--muted)}
+.dots{display:flex;gap:4px}.dots i{width:14px;height:14px;border-radius:50%;display:block;border:1px solid var(--line)}
+.board{border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.mocks{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+.mock{flex:1 1 270px;max-width:340px;min-width:0}
+.cap{font-size:11px;margin-bottom:6px;opacity:.7}
+.ph{display:block;width:100%;height:auto}
+.btn{display:inline-block;font:inherit;border:0;padding:8px 18px;cursor:default}
+
+/* A: scrapbook */
+.A{background:#C9D3D8;--p-sky:#BFD9E8;--p-sun:#F2C14E;--p-hill1:#7FAE88;--p-hill2:#5E9470;--p-a:#6FA67A;--p-b:#E8806A;--th:#C93C5E;color:#2B2A2A}
+.A .paper{background:#FCFBF8;padding:20px 18px;position:relative;transform:rotate(-1deg);box-shadow:0 1px 0 rgba(0,0,0,.08),0 6px 14px rgba(0,0,0,.12)}
+.A .tape{position:absolute;top:-10px;left:36px;width:84px;height:22px;background:#F2C14E;opacity:.75;transform:rotate(-4deg)}
+.A .hand{font-family:'Aref Ruqaa',serif;font-size:19px;color:#7A5C1E}
+.A .big{font-size:64px;font-weight:800;line-height:1}
+.A .q{font-family:'Aref Ruqaa',serif;font-size:23px;line-height:1.7;margin:10px 0}
+.A .ruled{height:70px;background-image:repeating-linear-gradient(transparent 0 23px,#C9D3D8 23px 24px)}
+.A .btn{background:#2B2A2A;color:#fff;border-radius:2px;margin-top:10px}
+.A .pol{background:#fff;padding:10px 10px 36px;transform:rotate(-3deg);position:relative;box-shadow:0 6px 14px rgba(0,0,0,.18)}
+.A .pol .tape{left:auto;right:28px;top:-12px;background:#E8806A;width:70px;transform:rotate(5deg)}
+.A .pol .ph{filter:saturate(.9)}
+.A .pol .hand{position:absolute;bottom:6px;right:12px;font-size:20px}
+.A .note{padding:10px 12px;font-size:14px;margin-top:14px;box-shadow:0 4px 8px rgba(0,0,0,.12)}
+.A .n1{background:#FBEAA0;transform:rotate(1.5deg)}
+.A .n2{background:#F7C9D2;transform:rotate(-1.5deg);margin-right:18px}
+.A .note b{font-family:'Aref Ruqaa',serif;font-weight:700;font-size:16px;display:block}
+.A .stamp{position:absolute;top:10px;left:10px;border:2px solid #C93C5E;color:#C93C5E;border-radius:50%;width:62px;height:62px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;line-height:1.3;transform:rotate(12deg)}
+
+/* B: literary book */
+.B{background:#1E2A3A;--p-sky:#C9D5DD;--p-sun:#E9D7A6;--p-hill1:#8FA597;--p-hill2:#6B8577;--p-a:#5C7A66;--p-b:#9A6A5C;color:#1E2A3A}
+.B .page{background:#F2F1EC;padding:26px 24px 20px;position:relative;font-family:'Amiri',serif;min-height:100%}
+.B .rib{position:absolute;top:0;left:22px;width:20px;height:54px;background:#C93C5E;clip-path:polygon(0 0,100% 0,100% 100%,50% 82%,0 100%)}
+.B .ch{font-size:13px;letter-spacing:.08em;color:#5B6676}
+.B .num{font-size:76px;line-height:1.1;font-weight:700}
+.B .q{font-size:25px;line-height:1.9;margin:6px 0 14px}
+.B .rule{height:1px;background:#1E2A3A;opacity:.25;margin-block:10px}
+.B .line{border-bottom:1px solid rgba(30,42,58,.25);height:30px}
+.B .btn{background:#1E2A3A;color:#F2F1EC;font-family:'Amiri',serif;font-size:16px;margin-top:14px}
+.B .fig{border:1px solid #1E2A3A;padding:6px}
+.B .figcap{font-size:13px;font-style:italic;color:#5B6676;margin-top:6px}
+.B .txt{font-size:17px;line-height:2;margin-top:10px}
+.B .txt b{font-weight:700}
+.B .pn{text-align:center;font-size:13px;color:#5B6676;margin-top:14px}
+
+/* C: film contact sheet */
+.C{background:#0E0E0E;--p-sky:#9A9A9A;--p-sun:#E6E6E6;--p-hill1:#4F4F4F;--p-hill2:#2D2D2D;--p-a:#C8C8C8;--p-b:#8A8A8A;color:#EDEDED}
+.C .code{font-family:'DM Mono',monospace;font-size:11px;color:#E8A03A;letter-spacing:.06em;direction:ltr;text-align:left}
+.C .big{font-size:110px;font-weight:400;line-height:1;letter-spacing:-.04em}
+.C .q{font-size:20px;line-height:1.8;font-weight:500;margin:10px 0 18px}
+.C .u{border-bottom:1px solid #555;height:34px;color:#777;font-size:14px;padding-top:4px}
+.C .btn{border:1px solid #E8A03A;color:#E8A03A;background:transparent;margin-top:16px}
+.C .strip{background:#1A1A1A;padding:18px 0;position:relative;display:flex;flex-direction:column;gap:10px}
+.C .strip:before,.C .strip:after{content:"";position:absolute;left:0;right:0;height:6px;background-image:repeating-linear-gradient(90deg,#0E0E0E 0 10px,transparent 10px 18px)}
+.C .strip:before{top:6px}.C .strip:after{bottom:6px}
+.C .frames{display:flex;gap:6px;padding:0 6px}
+.C .fr{flex:1;min-width:0;position:relative}
+.C .fr .code{position:absolute;bottom:2px;right:4px;font-size:9px}
+.C .cl{font-family:'DM Mono',monospace;font-size:12px;color:#BDBDBD;direction:rtl;line-height:2}
+.C .cl b{color:#E8A03A;font-weight:500}
+
+/* D: herbarium */
+.D{background:#D3DBCF;--p-sky:#D5E3E8;--p-sun:#E8D08A;--p-hill1:#9DB89A;--p-hill2:#7A9A7C;--p-a:#6B8F6E;--p-b:#B87A62;color:#2F3B31}
+.D .sheet{background:#EEF1EA;padding:18px;border:1px solid #9FAE9F;outline:1px solid #9FAE9F;outline-offset:-7px;position:relative}
+.D .lab{font-family:'DM Mono',monospace;font-size:11px;direction:ltr;text-align:left;color:#5F705F;letter-spacing:.04em}
+.D .lat{font-family:'Amiri',serif;font-style:italic;font-size:22px;direction:ltr;text-align:left;line-height:1.3}
+.D .q{font-family:'Amiri',serif;font-size:22px;line-height:1.9;margin:10px 0}
+.D .note{border:1px dashed #7E8F7E;padding:8px 10px;font-size:14px;min-height:64px;color:#6C7C6C}
+.D .btn{background:#2F3B31;color:#EEF1EA;margin-top:12px;border-radius:2px}
+.D .mount{position:relative;padding:10px;background:#E1E7DB}
+.D .mount i{position:absolute;width:14px;height:14px;background:#2F3B31;opacity:.75}
+.D .mount i:nth-of-type(1){top:0;left:0;clip-path:polygon(0 0,100% 0,0 100%)}
+.D .mount i:nth-of-type(2){top:0;right:0;clip-path:polygon(0 0,100% 0,100% 100%)}
+.D .mount i:nth-of-type(3){bottom:0;left:0;clip-path:polygon(0 0,0 100%,100% 100%)}
+.D .mount i:nth-of-type(4){bottom:0;right:0;clip-path:polygon(100% 0,0 100%,100% 100%)}
+.D .card{background:#fff;border:1px solid #9FAE9F;padding:10px 12px;margin-top:12px;font-size:13px;line-height:1.9}
+.D .card dt{display:inline;color:#5F705F}.D .card dd{display:inline;margin:0;font-weight:500}
+.D .card div{display:block}
+.D svg.herb{width:84px;height:auto;float:left;margin-left:6px;stroke:#2F3B31;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+
+/* progressive plan */
+.steps{list-style:none;margin:0;padding:0}
+.steps li{display:grid;grid-template-columns:84px 1fr;gap:14px;padding-block:12px;border-top:1px solid var(--line)}
+.steps li:first-child{border-top:0}
+.steps b{font-weight:800}
+.steps span{color:var(--muted);font-size:14px}
+.steps em{font-style:normal;color:var(--thread);font-weight:500}
+.ask{border-top:1px solid var(--line);padding-top:20px}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="photo" viewBox="0 0 120 90">
+    <rect width="120" height="90" fill="var(--p-sky)"/>
+    <circle cx="92" cy="22" r="10" fill="var(--p-sun)"/>
+    <path d="M0 62Q30 40 60 58T120 50V90H0Z" fill="var(--p-hill1)"/>
+    <path d="M0 78Q40 60 80 76T120 70V90H0Z" fill="var(--p-hill2)"/>
+    <path d="M45 70Q52 76 59 70" fill="none" stroke="#C93C5E" stroke-width="1.4" stroke-linecap="round"/>
+    <ellipse cx="45" cy="65" rx="4.5" ry="6.5" fill="var(--p-a)"/>
+    <ellipse cx="59" cy="65" rx="4.5" ry="6.5" fill="var(--p-b)"/>
+  </symbol>
+</svg>
+
+<div class="wrap">
+  <div class="head">
+    <h1>کدام سبک برای «باغ ما»؟</h1>
+    <p class="lead">چهار سبک ژورنالی با محتوای یکسان: صفحه‌ی «امروز» و یک صفحه‌ی ژورنال با عکس. فقط ظاهر فرق می‌کند. بگو کدام (الف تا ت)، یا ترکیبی از دو تا.</p>
+  </div>
+
+  <!-- A -->
+  <section>
+    <div class="head"><span class="tag">الف</span><h2>کلاژ کاغذی</h2>
+      <p class="lead">دفتر خاطرات دست‌ساز: پولاروید، چسب کاغذی، یادداشت‌های رنگی، مُهر و دست‌خط. گرم و بازیگوش، شبیه چیزی که خودتان چسبانده‌اید.</p>
+      <div class="meta"><span class="dots"><i style="background:#C9D3D8"></i><i style="background:#FCFBF8"></i><i style="background:#F2C14E"></i><i style="background:#F7C9D2"></i><i style="background:#C93C5E"></i></span><span>Aref Ruqaa برای دست‌خط · Vazirmatn</span></div></div>
+    <div class="board A"><div class="mocks">
+      <div class="mock"><div class="cap">امروز</div>
+        <div class="paper"><span class="tape"></span>
+          <div class="hand">صفحه‌ی ۱۷ از دفتر ما</div>
+          <div class="big">۹</div><div>روز رشته‌ی ما</div>
+          <p class="q">اگر فردا یک روز آزاد داشتیم، کجا می‌رفتیم؟</p>
+          <div class="ruled"></div>
+          <span class="btn">ثبت جواب</span></div></div>
+      <div class="mock"><div class="cap">صفحه‌ی ژورنال</div>
+        <div class="pol"><span class="tape"></span><svg class="ph" viewBox="0 0 120 90"><use href="#photo"/></svg><span class="hand">کلبه‌ی شمال</span></div>
+        <div class="note n1"><b>سارا</b>شمال، کلبه‌ای بدون آنتن!</div>
+        <div class="note n2"><b>آرمان</b>یک روز را فقط در بازار تجریش پرسه بزنیم.</div></div>
+    </div></div>
+  </section>
+
+  <!-- B -->
+  <section>
+    <div class="head"><span class="tag">ب</span><h2>کتاب ادبی</h2>
+      <p class="lead">صفحه‌های واقعی کتاب: فصل، شماره‌ی صفحه، شکل با زیرنویس، نشانک قرمز. آرام، جدی و ماندگار، مثل کتابی که بعداً چاپ می‌کنید.</p>
+      <div class="meta"><span class="dots"><i style="background:#1E2A3A"></i><i style="background:#F2F1EC"></i><i style="background:#5B6676"></i><i style="background:#8FA597"></i><i style="background:#C93C5E"></i></span><span>Amiri برای متن · Vazirmatn</span></div></div>
+    <div class="board B"><div class="mocks">
+      <div class="mock"><div class="cap" style="color:#C9D5DD">امروز</div>
+        <div class="page"><span class="rib"></span>
+          <div class="ch">فصل نهم · روز هفدهم</div>
+          <div class="num">۹</div><div class="ch">روز پشت‌سرهم</div>
+          <div class="rule"></div>
+          <p class="q">اگر فردا یک روز آزاد داشتیم، کجا می‌رفتیم؟</p>
+          <div class="line"></div><div class="line"></div>
+          <span class="btn">ثبت جواب</span>
+          <div class="pn">۳۳</div></div></div>
+      <div class="mock"><div class="cap" style="color:#C9D5DD">صفحه‌ی ژورنال</div>
+        <div class="page"><span class="rib"></span>
+          <div class="ch">پنجشنبه، ۱۷ آبان</div>
+          <div class="fig" style="margin-top:12px"><svg class="ph" viewBox="0 0 120 90"><use href="#photo"/></svg></div>
+          <div class="figcap">شکل ۱۷. کلبه‌ی شمال، بدون آنتن.</div>
+          <p class="txt"><b>سارا:</b> شمال، کلبه‌ای بدون آنتن!<br><b>آرمان:</b> یک روز را فقط در بازار تجریش پرسه بزنیم.</p>
+          <div class="pn">۳۴</div></div></div>
+    </div></div>
+  </section>
+
+  <!-- C -->
+  <section>
+    <div class="head"><span class="tag">پ</span><h2>نوار فیلم</h2>
+      <p class="lead">عکس‌محور و مینیمال: قاب‌های شماره‌دار روی نوار فیلم، سیاه‌وسفید، کدهای نارنجی لبه‌ی فیلم. مدرن و سینمایی، مناسب وقتی عکس زیاد دارید.</p>
+      <div class="meta"><span class="dots"><i style="background:#0E0E0E"></i><i style="background:#1A1A1A"></i><i style="background:#EDEDED"></i><i style="background:#9A9A9A"></i><i style="background:#E8A03A"></i></span><span>Vazirmatn سبک · DM Mono برای کد قاب</span></div></div>
+    <div class="board C"><div class="mocks">
+      <div class="mock"><div class="cap">امروز</div>
+        <div class="code">17A ▸ 09 DAYS</div>
+        <div class="big">۹</div>
+        <p class="q">اگر فردا یک روز آزاد داشتیم، کجا می‌رفتیم؟</p>
+        <div class="u">جواب تو…</div>
+        <span class="btn">ثبت جواب</span></div>
+      <div class="mock"><div class="cap">صفحه‌ی ژورنال</div>
+        <div class="strip">
+          <div class="frames">
+            <div class="fr"><svg class="ph" viewBox="0 0 120 90"><use href="#photo"/></svg><span class="code">16</span></div>
+            <div class="fr"><svg class="ph" viewBox="0 0 120 90"><use href="#photo"/></svg><span class="code">17</span></div>
+            <div class="fr"><svg class="ph" viewBox="0 0 120 90" style="opacity:.55"><use href="#photo"/></svg><span class="code">18</span></div>
+          </div></div>
+        <div class="cl" style="margin-top:12px"><b>۱۷ آبان</b> · کلبه‌ی شمال<br>سارا: شمال، کلبه‌ای بدون آنتن!<br>آرمان: یک روز را فقط در بازار تجریش پرسه بزنیم.</div></div>
+    </div></div>
+  </section>
+
+  <!-- D -->
+  <section>
+    <div class="head"><span class="tag">ت</span><h2>هرباریوم</h2>
+      <p class="lead">دفتر گیاه‌شناسی: هر روز یک «نمونه» با برچسب، نام لاتین خودتان، عکس با گوشه‌چسب و طراحی خطی گیاه. با تم باغ بیشتر از بقیه جور است.</p>
+      <div class="meta"><span class="dots"><i style="background:#D3DBCF"></i><i style="background:#EEF1EA"></i><i style="background:#2F3B31"></i><i style="background:#7A9A7C"></i><i style="background:#C93C5E"></i></span><span>Amiri برای نام‌ها · DM Mono برای برچسب</span></div></div>
+    <div class="board D"><div class="mocks">
+      <div class="mock"><div class="cap">امروز</div>
+        <div class="sheet">
+          <svg class="herb" viewBox="0 0 60 90"><path d="M30 86V30"/><path d="M30 30C30 18 36 12 44 10 44 22 38 30 30 30Z"/><path d="M30 52C30 42 22 36 12 36 12 46 20 52 30 52Z"/><path d="M30 66C30 58 38 54 46 54 46 62 40 66 30 66Z"/><path d="M22 86H38"/></svg>
+          <div class="lab">SPECIMEN 17 · ۹ DAYS</div>
+          <div class="lat">Seedus amoris duo</div>
+          <p class="q">اگر فردا یک روز آزاد داشتیم، کجا می‌رفتیم؟</p>
+          <div class="note">یادداشت میدانی…</div>
+          <span class="btn">ثبت جواب</span></div></div>
+      <div class="mock"><div class="cap">صفحه‌ی ژورنال</div>
+        <div class="sheet">
+          <div class="lab">SPECIMEN 17</div>
+          <div class="mount" style="margin-top:8px"><i></i><i></i><i></i><i></i><svg class="ph" viewBox="0 0 120 90"><use href="#photo"/></svg></div>
+          <dl class="card" style="margin-bottom:0">
+            <div><dt>محل: </dt><dd>کلبه‌ی شمال</dd></div>
+            <div><dt>تاریخ: </dt><dd>۱۷ آبان ۱۴۰۵</dd></div>
+            <div><dt>سارا: </dt><dd>شمال، کلبه‌ای بدون آنتن!</dd></div>
+            <div><dt>آرمان: </dt><dd>یک روز را فقط در بازار تجریش پرسه بزنیم.</dd></div>
+          </dl></div></div>
+    </div></div>
+  </section>
+
+  <section>
+    <div class="head"><h2>اتفاق‌ها مرحله‌به‌مرحله</h2>
+      <p class="lead">کاربر نباید همه‌چیز را یک‌جا ببیند. هر مرحله فقط وقتی باز می‌شود که قبلی تمام شده باشد و خودِ باز شدن یک لحظه‌ی کوچک است.</p></div>
+    <ul class="steps">
+      <li><b>روز ۱</b><span>فقط یک سؤال و یک دکمه. چیز دیگری دیده نمی‌شود. <em>دو دانه و نخ قرمز</em> جلوی چشم هستند.</span></li>
+      <li><b>بعد از اولین جواب</b><span>باغ باز می‌شود: اولین جوانه از خاک بیرون می‌آید.</span></li>
+      <li><b>روز ۳</b><span>ژورنال باز می‌شود، همراه با اجازه‌ی گذاشتن <em>اولین عکس</em>.</span></li>
+      <li><b>روز ۷</b><span>اولین هدیه‌ی تصادفی و تب نامه، با نامه‌ی هفته‌ی اول.</span></li>
+      <li><b>روز ۱۴</b><span>صفحه‌ی «ما» برای شخصی‌سازی عمیق‌تر: کلمه‌های رمزی و سالگرد.</span></li>
+      <li><b>پایان سال</b><span>خروجی کتاب یا آلبوم از همه‌ی صفحه‌ها.</span></li>
+    </ul>
+  </section>
+
+  <section class="ask">
+    <p>بگو کدام سبک، یا مثلاً «ب برای ژورنال و ت برای امروز». بعد همین را روی خود برنامه می‌نشانم، با همین مرحله‌بندی.</p>
+  </section>
+</div>
